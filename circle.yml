@@ -1,0 +1,12 @@
+machine:
+  ruby:
+    version: 2.0.0-p247
+  timezone: Asia/Tokyo
+
+dependencies:
+  override:
+    - gem install rubocop --no-ri --no-rdoc -V
+
+test:
+  override:
+    - rubocop -c rubocop.yml elb-full-metrics.rb
